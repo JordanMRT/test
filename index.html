@@ -579,6 +579,43 @@ position: relative;}
 .proj-link:hover span { transform:translateX(3px); }
 
 /* ══════════════════════════════
+   PROJETS CLIENTS
+══════════════════════════════ */
+
+#clients {
+  background: var(--navy3);
+  position: relative;
+}
+
+/* on surcharge les couleurs pour les cartes clients sur fond navy3 */
+#clients .proj-card {
+  background: white;
+  border-color: rgba(26,23,20,.1);
+}
+
+#clients .proj-intro {
+  color: var(--navy2);
+}
+
+#clients .proj-group-label {
+  color: var(--navy2);
+}
+
+#clients .proj-group-label::before {
+  background: var(--navy2);
+}
+
+#clients .proj-link {
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+#clients .proj-link:hover {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+/* ══════════════════════════════
    FRAGMENTS
 ══════════════════════════════ */
 #fragments { background:var(--cream); }
@@ -768,6 +805,39 @@ footer a:hover { color:var(--terra2); }
 
 .contact-email::before {
   content: attr(data-label);
+}
+
+/* STAMPS */
+.stamp-br {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  bottom: -1rem;
+  right: -1rem;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.stamp-tl {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 20rem;
+  left: -1rem;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.stamp-client {
+  color: var(--navy);
+  transform: rotate(-8deg);
+}
+
+.stamp-perso {
+  color: var(--terra2);
+  transform: rotate(-74deg);
 }
 </style>
 </head>
@@ -1053,26 +1123,31 @@ footer a:hover { color:var(--terra2); }
   </div>
 </section>
 
-<!-- ══════ PROJETS ══════ -->
+<!-- ══════ PROJETS PERSO ══════ -->
 <section id="projects">
     <div class="project-mascot"><img src="drawnnotebook.png"></div>
   <div class="inner">
     <p class="kicker" data-n="☀" style="color: var(--terracotta);">Mes univers</p>
     <p class="proj-intro">En dehors des réseaux, je crée des projets web pour le plaisir, et, parfois, ils deviennent quelque chose de vrai. Certains sont partagés à la communauté.</p>
+    
     <div class="proj-grid">
-
       <div class="proj-card">
+        <div class="stamp-br stamp-perso">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="0.8"/>
+    <path id="circle-perso" fill="none"
+      d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+    <text font-family="'DM Mono', monospace" font-size="9" letter-spacing="4" fill="currentColor">
+  <textPath href="#circle-perso" startOffset="12%">
+    PROJET PERSO · PROJET PERSO ·
+  </textPath>
+</text>
+<text x="50" y="55" text-anchor="middle" font-size="18" fill="currentColor">𖤓</text>
+  </svg>
+</div>
         <div class="proj-vis pv2">
           <span class="proj-vis-tag">Automation poétique</span>
-          <!--<svg width="200" height="115" viewBox="0 0 200 115" fill="none">
-            <rect x="55" y="8" width="90" height="105" rx="1" fill="rgba(246,241,233,.04)" stroke="rgba(246,241,233,.15)" stroke-width=".8"/>
-            <line x1="55" y1="24" x2="145" y2="24" stroke="rgba(246,241,233,.08)" stroke-width=".5" stroke-dasharray="3 3"/>
-            <text x="100" y="40" font-family="'DM Mono',monospace" font-size="7" fill="rgba(212,130,106,.9)" text-anchor="middle" letter-spacing="1.5">◈ G.U.S ◈</text>
-            <line x1="63" y1="48" x2="137" y2="48" stroke="rgba(246,241,233,.08)" stroke-width=".5"/>
-            <text x="68" y="62" font-family="'DM Mono',monospace" font-size="5.5" fill="rgba(246,241,233,.28)">01 MESSAGE DU MATIN</text>
-            <text x="68" y="73" font-family="'DM Mono',monospace" font-size="5.5" fill="rgba(246,241,233,.18)">02 MÉTÉO · MONTPELLIER</text>
-            <text x="68" y="84" font-family="'DM Mono',monospace" font-size="5.5" fill="rgba(246,241,233,.13)">03 MOT DU JOUR</text>
-          </svg>-->
         </div>
         <div class="proj-body">
           <p class="proj-n">- 01 -</p>
@@ -1084,17 +1159,22 @@ footer a:hover { color:var(--terra2); }
       </div>
 
       <div class="proj-card">
+        <div class="stamp-br stamp-perso">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="0.8"/>
+    <path id="circle-perso" fill="none"
+      d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+    <text font-family="'DM Mono', monospace" font-size="9" letter-spacing="4" fill="currentColor">
+  <textPath href="#circle-perso" startOffset="12%">
+    PROJET PERSO · PROJET PERSO ·
+  </textPath>
+</text>
+<text x="50" y="55" text-anchor="middle" font-size="18" fill="currentColor">𖤓</text>
+  </svg>
+</div>
         <div class="proj-vis pv1">
           <span class="proj-vis-tag">Communauté épistolaire</span>
-          <!--<svg width="200" height="115" viewBox="0 0 200 115" fill="none">
-            <rect x="55" y="20" width="90" height="65" rx="1" stroke="rgba(246,241,233,.18)" stroke-width="1"/>
-            <line x1="55" y1="38" x2="100" y2="55" stroke="rgba(246,241,233,.12)" stroke-width=".8"/>
-            <line x1="145" y1="38" x2="100" y2="55" stroke="rgba(246,241,233,.12)" stroke-width=".8"/>
-            <rect x="68" y="51" width="64" height="26" rx="1" fill="rgba(246,241,233,.04)"/>
-            <line x1="75" y1="60" x2="125" y2="60" stroke="rgba(246,241,233,.1)" stroke-width=".7"/>
-            <line x1="75" y1="68" x2="115" y2="68" stroke="rgba(246,241,233,.07)" stroke-width=".7"/>
-            <circle cx="100" cy="55" r="3.5" fill="rgba(212,130,106,.85)"/>
-          </svg>-->
         </div>
         <div class="proj-body">
           <p class="proj-n">- 02 -</p>
@@ -1107,6 +1187,20 @@ Ce projet m'a appris à construire une communauté autour d'un ton, d'une intent
       </div>
 
       <div class="proj-card">
+        <div class="stamp-br stamp-perso">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="0.8"/>
+    <path id="circle-perso" fill="none"
+      d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+    <text font-family="'DM Mono', monospace" font-size="9" letter-spacing="4" fill="currentColor">
+  <textPath href="#circle-perso" startOffset="12%">
+    PROJET PERSO · PROJET PERSO ·
+  </textPath>
+</text>
+<text x="50" y="55" text-anchor="middle" font-size="18" fill="currentColor">𖤓</text>
+  </svg>
+</div>
         <div class="proj-vis pv3">
           <span class="proj-vis-tag" style="color:var(--ink);background:rgba(26,23,20,.12)">Archive sensible</span>
           <svg width="200" height="115" viewBox="0 0 200 115" fill="none">
@@ -1130,6 +1224,20 @@ Parce que le quotidien a l'air banal, jusqu'à ce qu'on le regarde vraiment.</p>
       </div>
 
       <div class="proj-card">
+        <div class="stamp-br stamp-perso">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="0.8"/>
+    <path id="circle-perso" fill="none"
+      d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+    <text font-family="'DM Mono', monospace" font-size="9" letter-spacing="4" fill="currentColor">
+  <textPath href="#circle-perso" startOffset="12%">
+    PROJET PERSO · PROJET PERSO ·
+  </textPath>
+</text>
+<text x="50" y="55" text-anchor="middle" font-size="18" fill="currentColor">𖤓</text>
+  </svg>
+</div>
         <div class="proj-vis pv4">
           <span class="proj-vis-tag">Outil temps réel</span>
         </div>
@@ -1141,6 +1249,50 @@ Parce que le quotidien a l'air banal, jusqu'à ce qu'on le regarde vraiment.</p>
           <a href="https://jordanmrt.github.io/sncf-poxy-live/" target="_blank" class="proj-link">Explorer <span>→</span></a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PROJETS  CLIENTS ══════ -->
+
+<section id="clients">
+  <div class="project-mascot"><img src="drawnglasses.png"></div>
+  <div class="inner">
+    <p class="kicker" data-n="☀" style="color: var(--navy);">Cas clients</p>
+    <p class="proj-intro">Des projets réels, pour de vraies personnes. Voici ce que j'ai créé pour d'autres.</p>
+    <div class="proj-grid">
+      <div class="proj-card">
+<div class="stamp-br stamp-client">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- cercle extérieur -->
+    <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <!-- cercle intérieur -->
+    <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="0.8"/>
+    <!-- texte circulaire -->
+    <path id="circle-client" fill="none"
+      d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+    <text font-family="'DM Mono', monospace" font-size="9" letter-spacing="4" fill="currentColor">
+  <textPath href="#circle-client" startOffset="0%">
+    PROJET CLIENT · PROJET CLIENT ·
+  </textPath>
+</text>
+    <text x="50" y="55" text-anchor="middle" font-size="18">♪</text>
+  </svg>
+</div>
+  <div class="proj-vis" style="background:linear-gradient(135deg,#F5F0E8 0%,#E8E0D0 100%)">
+    <span class="proj-vis-tag" style="color:var(--ink);background:rgba(26,23,20,.1)">Identité digitale 360°</span>
+    <img src="https://musicalune.com/wp-content/uploads/2022/05/Carte_Musicalune_clean-1024x571.png" 
+         alt="Musicalune" style="width:80%;object-fit:contain;opacity:.9">
+  </div>
+  <div class="proj-body">
+    <p class="proj-n">- 01 -</p>
+    <h3 class="proj-name">Musicalune</h3>
+    <span class="proj-vibe">Présence en ligne · Local</span>
+    <p class="proj-desc">Création complète de la présence numérique d'une professeure de piano à Montpellier. Site WordPress, Instagram, page Facebook, Google My Business. L'objectif : la faire connaître et ramener de nouveaux élèves.</p>
+    <a href="https://musicalune.com" target="_blank" class="proj-link">Voir le site <span>→</span></a>
+  </div>
+</div>
+</div>
     </div>
   </div>
 </section>
