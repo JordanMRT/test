@@ -752,7 +752,7 @@ footer a:hover { color:var(--terra2); }
   footer {padding: 1rem 1rem; font-size: .45rem; }
 }
 @media(max-width: 900px) {
-  #hero { flex-direction: column; padding: 7rem 1.5rem 4rem;
+  #hero { flex-direction: column; padding: 7rem 1.5rem 1rem;
     min-height: 100vh;
     min-height: 100svh;}
   .hero-left, .hero-right { padding: 0; width: 100%; flex: 0.3; }
@@ -761,6 +761,9 @@ footer a:hover { color:var(--terra2); }
   /*.htag { background: rgba(28,24,20,.45); border-color: rgba(247,242,232,.25); color: var(--cream); backdrop-filter: blur(4px); }*/
   .hero-actions {gap: 2rem;}
   .btn-dark {letter-spacing: .1em;}
+  .scroll-indicator {display: none;}
+  #cur, #cur-r { display: none; }
+  body { cursor: auto; }
 }
 
 .contact-email::before {
@@ -839,10 +842,10 @@ footer a:hover { color:var(--terra2); }
       </svg>-->
       <img src="drawnsocialmedia.png" alt="Social Media Phone">
     </div>
+</div>
     <div class="scroll-indicator">
   <span>Explorer</span>
   <div class="scroll-arrow"></div>
-</div>
   </div>
 </section>
 
