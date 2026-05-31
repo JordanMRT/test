@@ -738,8 +738,6 @@ footer a:hover { color:var(--terra2); }
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  /*#hero { grid-template-columns:1fr; }
-  .hero-left { min-height:55vh; }*/
   .about-grid,.contact-grid,.craft-top,.xp-grid { grid-template-columns:1fr; gap:3rem; }
   .craft-cells { grid-template-columns:1fr; }
   .masonry { columns:1; }
@@ -754,7 +752,9 @@ footer a:hover { color:var(--terra2); }
   footer {padding: 1rem 1rem; font-size: .45rem; }
 }
 @media(max-width: 900px) {
-  #hero { flex-direction: column; padding: 7rem 1.5rem 4rem; }
+  #hero { flex-direction: column; padding: 7rem 1.5rem 4rem;
+    min-height: 100vh;
+    min-height: 100svh;}
   .hero-left, .hero-right { padding: 0; width: 100%; flex: 0.3; }
   .hero-desc { max-width: 100%; }
   .hero-right-deco, .hero-float { display: none; }
